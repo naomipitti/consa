@@ -1,1 +1,354 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telar de la Vida | Revista Ecológica Panamá</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            green: '#2E7D32',
+                            dark: '#1B5E20',
+                            light: '#E8F5E9',
+                            ocean: '#0288D1',
+                            sand: '#F5F5DC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1518182170546-0766ce6fec56?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .pattern-bg {
+            background-color: #fdfbf7;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232e7d32' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 pattern-bg antialiased">
 
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-leaf text-brand-green text-2xl mr-2"></i>
+                    <span class="font-serif font-bold text-xl tracking-wider text-gray-900">TELAR DE LA VIDA</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-brand-green transition">Inicio</a>
+                    <a href="#cambio-climatico" class="text-gray-600 hover:text-brand-green transition">Salud y Clima</a>
+                    <a href="#tortugas" class="text-gray-600 hover:text-brand-green transition">Vida Marina</a>
+                    <a href="#comunidad" class="text-gray-600 hover:text-brand-green transition">Acción Verde</a>
+                    <a href="#areas-protegidas" class="text-gray-600 hover:text-brand-green transition">Áreas Protegidas</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#inicio" class="block px-4 py-2 text-gray-700 hover:bg-brand-light">Inicio</a>
+            <a href="#cambio-climatico" class="block px-4 py-2 text-gray-700 hover:bg-brand-light">Salud y Clima</a>
+            <a href="#tortugas" class="block px-4 py-2 text-gray-700 hover:bg-brand-light">Vida Marina</a>
+            <a href="#comunidad" class="block px-4 py-2 text-gray-700 hover:bg-brand-light">Acción Verde</a>
+            <a href="#areas-protegidas" class="block px-4 py-2 text-gray-700 hover:bg-brand-light">Áreas Protegidas</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg h-screen flex items-center justify-center text-center px-4">
+        <div class="bg-white/90 backdrop-blur-sm p-8 md:p-12 rounded-lg shadow-2xl max-w-3xl border-t-4 border-brand-green">
+            <p class="text-brand-green font-bold tracking-widest uppercase mb-2">Diciembre 2025 - Volumen I</p>
+            <h1 class="font-serif text-4xl md:text-6xl text-gray-900 font-bold mb-4">Panamá: Puente Biológico</h1>
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed italic mb-6">
+                "Un ejemplo del 'Telar de la Vida', donde cada especie y ecosistema está intrínsecamente ligado."
+            </p>
+            <a href="#cambio-climatico" class="inline-block bg-brand-green text-white px-8 py-3 rounded-full font-semibold hover:bg-brand-dark transition transform hover:-translate-y-1 shadow-lg">
+                Leer Revista
+            </a>
+        </div>
+    </section>
+
+    <!-- Cambio Climático y Salud -->
+    <section id="cambio-climatico" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-4">Cambio Climático y Salud</h2>
+            <div class="w-24 h-1 bg-brand-green mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+            <div>
+                <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ciencia y Clima" class="rounded-lg shadow-lg mb-6 w-full h-64 object-cover">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <h3 class="font-serif text-2xl font-bold mb-4 text-brand-dark">Impacto en Chiriquí</h3>
+                    <p class="text-gray-600 mb-4 text-justify">
+                        El cambio climático se ha convertido en uno de los principales problemas del siglo XXI. En Chiriquí, el aumento de temperatura y las alteraciones en las lluvias han favorecido enfermedades como el <strong>dengue, zika y chikungunya</strong>.
+                    </p>
+                    <p class="text-gray-600 mb-4 text-justify">
+                        Además, las inundaciones y sequías afectan la seguridad alimentaria y la calidad del agua, incrementando casos de bacterias como <em>Salmonella</em> y <em>E. coli</em>, y agravando problemas respiratorios como el asma.
+                    </p>
+                    <p class="text-xs text-gray-400 mt-4 border-t pt-2">Fuente: Revista Latido, UNACHI. Redactado por Pablo Antonio Acosta.</p>
+                </div>
+            </div>
+
+            <div class="bg-brand-light p-8 rounded-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-brand-green rounded-full opacity-20"></div>
+                <h3 class="font-serif text-2xl font-bold mb-6 text-brand-dark">7 Consecuencias Principales</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center">
+                        <span class="bg-red-100 text-red-600 p-2 rounded-full mr-4"><i class="fas fa-paw"></i></span>
+                        <span>Impactos en la biodiversidad</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="bg-orange-100 text-orange-600 p-2 rounded-full mr-4"><i class="fas fa-fire"></i></span>
+                        <span>Incendios Forestales</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="bg-blue-100 text-blue-600 p-2 rounded-full mr-4"><i class="fas fa-icicles"></i></span>
+                        <span>Deshielo</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="bg-indigo-100 text-indigo-600 p-2 rounded-full mr-4"><i class="fas fa-water"></i></span>
+                        <span>Aumento del nivel del mar</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="bg-yellow-100 text-yellow-600 p-2 rounded-full mr-4"><i class="fas fa-sun"></i></span>
+                        <span>Desertización y Temperaturas Extremas</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="bg-gray-100 text-gray-600 p-2 rounded-full mr-4"><i class="fas fa-wind"></i></span>
+                        <span>Fenómenos meteorológicos extremos</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="bg-purple-100 text-purple-600 p-2 rounded-full mr-4"><i class="fas fa-exclamation-triangle"></i></span>
+                        <span>Vulnerabilidad y Riesgo Climático</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vida Marina: Tortugas -->
+    <section id="tortugas" class="bg-brand-ocean/10 py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <span class="bg-brand-ocean text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">Noticia Destacada</span>
+                    <h2 class="font-serif text-4xl font-bold text-gray-900 mb-6">El Rescate de la Tortuga Carey</h2>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        Gracias a la coordinación ciudadana y el Servicio Nacional Aeronaval, MIAMBIENTE rescató una <strong>Tortuga Carey (Eretmochelys imbricata)</strong> cerca del muelle azucarero en Pedregal. El reptil fue liberado exitosamente en el Litoral Pacífico.
+                    </p>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md mt-6 border-l-4 border-brand-ocean">
+                        <h4 class="font-bold text-lg mb-2 text-brand-ocean">Ficha Técnica: Tortuga Carey</h4>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <p class="text-gray-500">Estado</p>
+                                <p class="font-semibold">Críticamente Amenazada</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500">Característica</p>
+                                <p class="font-semibold">Pico de halcón (curvo)</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500">Hábitat</p>
+                                <p class="font-semibold">Arrecifes coralinos</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500">Caparazón</p>
+                                <p class="font-semibold">Tonos ámbar y marrón (jaspeado)</p>
+                            </div>
+                            <div class="col-span-2">
+                                <p class="text-gray-500">Amenazas</p>
+                                <p class="font-semibold">Caza furtiva, destrucción de hábitat, contaminación.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 relative">
+                   <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Tortuga Carey" class="rounded-2xl shadow-2xl rotate-2 hover:rotate-0 transition duration-500 w-full object-cover h-96">
+                   <div class="absolute bottom-4 right-4 bg-white/90 p-4 rounded-lg shadow text-xs max-w-xs">
+                       <p><strong>Recuerda:</strong> A partir de 2025, nueva política de "Cero Bolsas Plásticas" en playas.</p>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acción Comunitaria: Limpieza y Reforestación -->
+    <section id="comunidad" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-4">Acción en Comunidad</h2>
+            <p class="max-w-2xl mx-auto text-gray-600">Esfuerzos conjuntos en Chiriquí para restaurar nuestros ecosistemas.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Limpieza Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1618477461853-5f8dd68aa395?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Limpieza de playas" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-trash-alt text-brand-ocean mr-2"></i>
+                        <span class="text-sm font-bold text-gray-500 uppercase">Playa La Barqueta</span>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3 text-gray-900 group-hover:text-brand-ocean transition">"La Barqueta sin huellas"</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Alrededor de 200 voluntarios recolectaron <strong>más de una tonelada de basura</strong>. Esta acción es vital para proteger el desove de tortugas marinas en el refugio de vida silvestre.
+                    </p>
+                    <p class="text-xs text-gray-400 font-bold">Org: JCI David & MIAMBIENTE</p>
+                </div>
+            </div>
+
+            <!-- Reforestación Card -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Vivero Forestal" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-seedling text-brand-green mr-2"></i>
+                        <span class="text-sm font-bold text-gray-500 uppercase">Vivero Forestal</span>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3 text-gray-900 group-hover:text-brand-green transition">Restaurando la Vida Forestal</h3>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        MIAMBIENTE y estudiantes preparan plantones para la temporada de reforestación. El objetivo es recuperar ecosistemas en el occidente de Panamá.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Roble</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Guayacán</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Caoba</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Espavé</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Azuero Banner -->
+        <div class="mt-12 bg-gray-900 rounded-2xl p-8 md:p-12 text-white text-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+            <h3 class="relative z-10 font-serif text-2xl md:text-3xl font-bold mb-4">Iniciativa de Bosques (IBMAZUR)</h3>
+            <p class="relative z-10 max-w-3xl mx-auto text-gray-300 mb-6">
+                Una alerta SOS global para salvar los bosques del Macizo de Azuero. 180,000 habitantes dependen del agua de estas montañas. Solo 60,000 hectáreas tienen protección legal.
+            </p>
+            <button class="relative z-10 border border-white px-6 py-2 rounded-full hover:bg-white hover:text-gray-900 transition">Conocer Iniciativa EcoBio</button>
+        </div>
+    </section>
+
+    <!-- Áreas Protegidas y Manglares -->
+    <section id="areas-protegidas" class="py-20 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-4">Santuarios Naturales</h2>
+                <div class="w-24 h-1 bg-brand-ocean mx-auto"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Definiciones -->
+                <div class="lg:w-1/3 space-y-4">
+                    <div class="bg-white p-6 rounded-lg shadow border-l-4 border-blue-500">
+                        <h3 class="font-bold text-lg mb-2">Área Marina Protegida (AMP)</h3>
+                        <p class="text-sm text-gray-600">Espacios designados para proteger parcial o totalmente el medio ambiente. Su objetivo principal es la <strong>conservación</strong> a largo plazo.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow border-l-4 border-teal-500">
+                        <h3 class="font-bold text-lg mb-2">Área de Pesca Responsable (AP)</h3>
+                        <p class="text-sm text-gray-600">Zonas donde se regula la pesca para que sea <strong>sostenible</strong>. Aunque protegen hábitats, su enfoque es la producción pesquera manejada.</p>
+                    </div>
+                </div>
+
+                <!-- Manglares de David -->
+                <div class="lg:w-2/3 bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="font-serif text-2xl font-bold text-brand-dark mb-4">Zona Protegida: Manglares de David</h3>
+                    <p class="text-gray-700 mb-6">
+                        Ubicados en los corregimientos de David y Pedregal. Esta zona cuenta con más de 23,000 hectáreas terrestres y 23,000 marinas. Es un ecosistema vital que enfrenta presiones como la extracción ilegal de cáscara de mangle y la contaminación.
+                    </p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-brand-green mb-2 border-b border-gray-200 pb-1">Flora (Manglares)</h4>
+                            <ul class="text-sm space-y-1 text-gray-600">
+                                <li>• Mangle Rojo <em>(Rhizophora mangle)</em></li>
+                                <li>• Mangle Blanco <em>(Laguncularia racemosa)</em></li>
+                                <li>• Mangle Negro <em>(Avicennia germinans)</em></li>
+                                <li>• Mangle Piñuelo <em>(Pelliciera rhizophorae)</em></li>
+                                <li>• Alcornoque <em>(Mora oleifera)</em></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brand-ocean mb-2 border-b border-gray-200 pb-1">Fauna Destacada</h4>
+                            <ul class="text-sm space-y-1 text-gray-600">
+                                <li>• <strong>Cotinga Piquiamarilla</strong> (Única población conocida)</li>
+                                <li>• Concha Negra y Pata de Burro</li>
+                                <li>• Tortugas: Caguama, Mulata, Carey, Canal</li>
+                                <li>• Peces: Róbalo, Pargo, Corvina</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips y Cierre -->
+    <section class="py-16 bg-brand-dark text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <i class="fas fa-bicycle text-4xl mb-4 text-green-300"></i>
+            <h2 class="text-3xl font-bold mb-6">Propósitos 2025</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-4 border border-green-700 rounded-lg hover:bg-green-800 transition">
+                    <h3 class="font-bold text-xl mb-2">Estrena Piernas</h3>
+                    <p class="text-sm text-green-100">Usa bicicleta. Aire fresco, cardio gratis y cero contaminación.</p>
+                </div>
+                <div class="p-4 border border-green-700 rounded-lg hover:bg-green-800 transition">
+                    <h3 class="font-bold text-xl mb-2">Respiro 2025</h3>
+                    <p class="text-sm text-green-100">Reciclar, Reducir, Reutilizar. Beneficio: Un mundo menos dramático.</p>
+                </div>
+                <div class="p-4 border border-green-700 rounded-lg hover:bg-green-800 transition">
+                    <h3 class="font-bold text-xl mb-2">Sin Huellas</h3>
+                    <p class="text-sm text-green-100">Si llevas basura a la playa, regrésala contigo. Evita la pena.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="mb-2">Información extraída de: MIAMBIENTE, Revista Latido (UNACHI), MarViva.net, EcoBio, Fundación PA.NA.MA.</p>
+            <p class="text-sm">© 2025 Telar de la Vida - Volumen I. Desarrollado con fines educativos.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
